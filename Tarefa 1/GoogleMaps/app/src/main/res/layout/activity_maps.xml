@@ -1,0 +1,98 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="15dp"
+    tools:context="wpos.com.br.googlemapsv7.MapsActivity"
+    tools:ignore="MergeRootFrame" >
+
+
+    <!-- Rótulo de Caixa de Texto para Latitude -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/lblLatitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="30dp"
+            android:text="@string/lblLatitude" />
+        <EditText
+            android:id="@+id/txtLatitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:ems="8"
+            android:inputType="text">
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <!-- Rótulo de Caixa de Texto para Longitude -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/lblLongitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="20dp"
+            android:text="@string/lblLongitude" />
+
+        <EditText
+            android:id="@+id/txtLongitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:ems="8"
+            android:inputType="text" />
+    </LinearLayout>
+
+
+
+
+    <!-- Botão Localizar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/btnLocalizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnLocalizar"
+            android:onClick="localizar" />
+    </LinearLayout>
+    <!-- Fragmento onde será exibido o mapa -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:orientation="horizontal" >
+
+
+
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="wpos.com.br.googlemapsv7.MapsActivity" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
